@@ -4,13 +4,13 @@
 卖掉了用了两年的XPS15-9560，因为游戏性能实在跟不上，只玩Dota2和单机大作（使命召唤系列和极品飞车），索性卖掉自己窜了台台式机，正式用性能比较好的主机了。
 
 ## 配置如下：
-主板：微星Z370M MORTAR
-CPU：i5-8600K
-内存：芝奇幻光戟 DDR4 3000 8G
-硬盘：三星(SAMSUNG) 860 EVO 500G 2.5英寸 SATAIII 固态硬盘
-显卡：技嘉Nvdia 1060 3G OC
-机箱：酷冷至尊Q300P
-显示器：DELL U2417H
+- 主板：微星Z370M MORTAR
+- CPU：i5-8600K
+- 内存：芝奇幻光戟 DDR4 3000 8G
+- 硬盘：三星(SAMSUNG) 860 EVO 500G 2.5英寸 SATAIII 固态硬盘
+- 显卡：技嘉Nvdia 1060 3G OC
+- 机箱：酷冷至尊Q300P
+- 显示器：DELL U2417H
 
 ![首页](http://pc3g4hj86.bkt.clouddn.com/%E9%BB%91%E8%8B%B9%E6%9E%9CZ370M.png)
 
