@@ -12,7 +12,7 @@
 - 机箱：酷冷至尊Q300P
 - 显示器：DELL U2417H
 
-![1](https://tuchuang-1258561688.cos.ap-chengdu.myqcloud.com/msi-os-%E6%A1%8C%E9%9D%A2.png)
+![123](https://tuchuang-1258561688.cos.ap-chengdu.myqcloud.com/msi-os-%E6%A1%8C%E9%9D%A2.png)
 
 ## 简介
 目前除了蓝牙和WI-FI没有装（台式机没装WI-FI蓝牙卡），三码完美，FACETIME，iCloud，显卡，变频，声卡都完美。
