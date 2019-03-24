@@ -23,4 +23,4 @@ CPU：i5-8600K
 
 如此一来，即便进入macOS10.14使用的是集成显卡，但可以完美正常使用，因为一般也不会在mac下玩游戏，集成显卡足以。这样的操作可能会经常切换显示器接口。但总的来说可以解决升级10.14不能用显卡的问题。
 
-![双显卡切换](https://tuchuang-1258561688.cos.ap-chengdu.myqcloud.com/%E5%8F%8C%E6%98%BE%E5%8D%A1%E5%88%87%E6%8D%A2.jpg?q-sign-algorithm=sha1&q-ak=AKID97DuOyDgHbynMro7Qm1Xi3RKzrpG2NID&q-sign-time=1552882501;1552884301&q-key-time=1552882501;1552884301&q-header-list=&q-url-param-list=&q-signature=66a0708e677c676f4e88a85b8f467ddfc68ea5aa&x-cos-security-token=36461e60821b7fdbdb34ee22c9fe87f18cf6f56c10001)
+![双显卡切换](https://tuchuang-1258561688.cos.ap-chengdu.myqcloud.com/%E5%8F%8C%E6%98%BE%E5%8D%A1%E5%88%87%E6%8D%A2.jpg)
