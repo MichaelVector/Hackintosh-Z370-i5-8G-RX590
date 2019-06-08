@@ -5,7 +5,7 @@
 主板：微星Z370M MORTAR
 CPU：i5-8600K
 内存：芝奇幻光戟 DDR4 3000 8G
-硬盘：三星(SAMSUNG) 860 EVO 500G 2.5英寸 SATAIII 固态硬盘
+硬盘：三星(SAMSUNG) 970 EVO Plus 500G NVME
 显卡：技嘉Nvidia 1060 3G OC
 机箱：酷冷至尊Q300P
 显示器：DELL U2417H
