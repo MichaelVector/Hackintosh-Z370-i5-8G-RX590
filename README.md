@@ -2,18 +2,22 @@
 卖掉了用了两年的XPS15-9560，因为游戏性能实在跟不上，只玩Dota2和单机大作（使命召唤系列和极品飞车），索性卖掉自己的笔记本窜了台台式机，正式用性能比较好的主机了。
 
 ## 配置如下：
-主板：微星Z370M MORTAR
-CPU：i5-8600K
-内存：芝奇幻光戟 DDR4 3000 8G
-硬盘：三星(SAMSUNG) 970 EVO Plus 500G NVME
-显卡：技嘉Nvidia 1060 3G OC
-机箱：酷冷至尊Q300P
-显示器：DELL U2417H
+- 主板：微星Z370M MORTAR
+- CPU：i5-8600K
+- 内存：芝奇幻光戟 DDR4 3000 8G
+- 硬盘：三星(SAMSUNG) 970 EVO Plus 500G M.2 NVME
+- 显卡：技嘉Nvidia 1060 3G OC
+- 机箱：酷冷至尊Q300P
+- 显示器：DELL U2417H
 
 ![首页](https://tuchuang-1258561688.cos.ap-chengdu.myqcloud.com/msi-os-%E6%A1%8C%E9%9D%A2.png)
 
 ## 简介
 目前除了蓝牙和WI-FI没有装（台式机没装WI-FI蓝牙卡），icloud三码完美，FACETIME，iCloud，显卡，变频，声卡都完美。
+
+## 更新
+- 新添加了三星970EvoPlus的M.2 NVME固态硬盘，有个问题是旧版本的1X固件是无法安装和适用黑苹果，所以要去官网下载2X固件并升级。
+- 清除了序列号，有朋友需要此Clover可以自定义序列号信息。
 
 ## 如何在有独立显卡的设备下（nVidia）使用macOS14
 
