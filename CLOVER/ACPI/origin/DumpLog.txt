@@ -1,0 +1,128 @@
+83:648  64:463  Found UEFI Acpi 2.0 RSDP at 79AB3000
+83:648  0:000  Saving ACPI tables from RSDP 79AB3000 to EFI\CLOVER\ACPI\origin ...
+83:648  0:000   79AB3000: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36 -> RSDP.aml
+83:663  0:015    (Xsdt: 79AB30B0, Rsdt: 79AB3028)
+83:663  0:000    79AB30B0: 'XSDT', 'A M I', Rev: 1, Len: 220 -> XSDT.aml
+83:676  0:013    79AB3028: 'RSDT', 'A M I', Rev: 1, Len: 128 -> RSDT.aml
+83:689  0:013    Tables in Xsdt: 23
+83:689  0:000    0. 79ADBD40: 'FACP', 'A M I', Rev: 6, Len: 276 -> FACP.aml
+83:703  0:013        (Dsdt: 79AB3220, Facs: 79B2EF00, XDsdt: 79AB3220, XFacs: 0)
+83:703  0:000        79AB3220: 'DSDT', 'A M I', Rev: 2, Len: 166681 -> DSDT.aml
+83:721  0:018        79B2EF00: 'FACS', Ver: 2, Len: 64 -> FACS.aml
+83:734  0:013    1. 79ADBE58: 'APIC', 'A M I', Rev: 3, Len: 160 -> APIC.aml
+83:747  0:013    2. 79ADBEF8: 'FPDT', 'A M I', Rev: 1, Len: 68 -> FPDT.aml
+83:760  0:012    3. 79ADBF40: 'FIDT', 'A M I', Rev: 1, Len: 156 -> FIDT.aml
+83:773  0:012    4. 79ADBFE0: 'MCFG', 'A M I', Rev: 1, Len: 60 -> MCFG.aml
+83:786  0:012    5. 79ADC020: 'SSDT', 'SataTabl', Rev: 1, Len: 931 -> SSDT-0-SataTabl.aml
+83:799  0:013    6. 79ADC3C8: 'SSDT', 'SaSsdt', Rev: 2, Len: 12645 -> SSDT-1-SaSsdt.aml
+83:813  0:014    7. 79ADF530: 'SSDT', 'PegSsdt', Rev: 2, Len: 10051 -> SSDT-2-PegSsdt.aml
+83:826  0:013    8. 79AE1C78: 'HPET', 'KBL', Rev: 1, Len: 56 -> HPET.aml
+83:840  0:013    9. 79AE1CB0: 'SSDT', 'Ther_Rvp', Rev: 2, Len: 4522 -> SSDT-3-Ther_Rvp.aml
+83:853  0:013    10. 79AE2E60: 'SSDT', 'xh_rvp08', Rev: 2, Len: 2603 -> SSDT-4-xh_rvp08.aml
+83:866  0:013    11. 79AE3890: 'UEFI', 'A M I', Rev: 1, Len: 72 -> UEFI.aml
+83:879  0:013    12. 79AE38D8: 'SSDT', 'CpuSsdt', Rev: 2, Len: 6062 -> SSDT-5-CpuSsdt.aml (Found hidden SSDT 7 pcs)
+83:892  0:012        * 79642098: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1848  53 53 44 54 38 07 00 00 02 BF 50 6D 52 65 66 00 Internal length = 1848 -> SSDT-x5_0-Cpu0Ist.aml
+83:906  0:013        * 79627018: 'SSDT', 'ApIst', Rev: 2, Len: 3348  53 53 44 54 14 0D 00 00 02 30 50 6D 52 65 66 00 Internal length = 3348 -> SSDT-x5_1-ApIst.aml
+83:918  0:012        * 79626018: 'SSDT', 'Cpu0Cst', Rev: 2, Len: 1023  53 53 44 54 FF 03 00 00 02 17 50 6D 52 65 66 00 Internal length = 1023 -> SSDT-x5_2-Cpu0Cst.aml
+83:931  0:013        * 7962E798: 'SSDT', 'ApCst', Rev: 2, Len: 778  53 53 44 54 0A 03 00 00 02 99 50 6D 52 65 66 00 Internal length = 778 -> SSDT-x5_3-ApCst.aml
+83:945  0:013        * 7962E018: 'SSDT', 'Cpu0Hwp', Rev: 2, Len: 186  53 53 44 54 BA 00 00 00 02 83 50 6D 52 65 66 00 Internal length = 186 -> SSDT-x5_4-Cpu0Hwp.aml
+83:958  0:012        * 7962EB98: 'SSDT', 'ApHwp', Rev: 2, Len: 791  53 53 44 54 17 03 00 00 02 86 50 6D 52 65 66 00 Internal length = 791 -> SSDT-x5_5-ApHwp.aml
+83:971  0:012        * 7962E118: 'SSDT', 'HwpLvt', Rev: 2, Len: 1576  53 53 44 54 28 06 00 00 02 8B 50 6D 52 65 66 00 Internal length = 1576 -> SSDT-x5_6-HwpLvt.aml
+83:984  0:012  
+83:984  0:000    13. 79AE5088: 'LPIT', 'KBL', Rev: 1, Len: 148 -> LPIT.aml
+83:997  0:013    14. 79AE5120: 'SSDT', 'HdaDsp', Rev: 2, Len: 321 -> SSDT-6-HdaDsp.aml
+84:010  0:013    15. 79AE5268: 'SSDT', 'sensrhub', Rev: 2, Len: 671 -> SSDT-7-sensrhub.aml
+84:023  0:012    16. 79AE5508: 'SSDT', 'PtidDevc', Rev: 2, Len: 12290 -> SSDT-8-PtidDevc.aml
+84:036  0:012    17. 79AE8510: 'SSDT', 'TbtTypeC', Rev: 2, Len: 1303 -> SSDT-9-TbtTypeC.aml
+84:049  0:012    18. 79AE8A28: 'SSDT', 'Wwan', Rev: 2, Len: 745 -> SSDT-10-Wwan.aml
+84:062  0:012    19. 79AE8D18: 'DBGP', '', Rev: 1, Len: 52 -> DBGP.aml
+84:075  0:013    20. 79AE8D50: 'DBG2', '', Rev: 0, Len: 84 -> DBG2.aml
+84:088  0:013    21. 79AE8DA8: 'BGRT', 'A M I', Rev: 1, Len: 56 -> BGRT.aml
+84:100  0:012    22. 79AE8DE0: 'WSMT', 'A M I', Rev: 1, Len: 40 -> WSMT.aml
+84:115  0:014    Tables in Rsdt: 23
+84:115  0:000    0. 79AB3198: 'FACP', 'A M I', Rev: 2, Len: 132 -> RSDT-FACP.aml
+84:128  0:013        (Dsdt: 79AB3220, Facs: 79B2EEC0)
+84:128  0:000        79AB3220: 'DSDT', 'A M I', Rev: 2, Len: 166681
+84:130  0:002        79B2EEC0: 'FACS', Ver: 0, Len: 64 -> RSDT-FACS.aml
+84:143  0:013    1. 79ADBE58: 'APIC', 'A M I', Rev: 3, Len: 160
+84:143  0:000    2. 79ADBEF8: 'FPDT', 'A M I', Rev: 1, Len: 68
+84:143  0:000    3. 79ADBF40: 'FIDT', 'A M I', Rev: 1, Len: 156
+84:143  0:000    4. 79ADBFE0: 'MCFG', 'A M I', Rev: 1, Len: 60
+84:143  0:000    5. 79ADC020: 'SSDT', 'SataTabl', Rev: 1, Len: 931
+84:143  0:000    6. 79ADC3C8: 'SSDT', 'SaSsdt', Rev: 2, Len: 12645
+84:143  0:000    7. 79ADF530: 'SSDT', 'PegSsdt', Rev: 2, Len: 10051
+84:143  0:000    8. 79AE1C78: 'HPET', 'KBL', Rev: 1, Len: 56
+84:143  0:000    9. 79AE1CB0: 'SSDT', 'Ther_Rvp', Rev: 2, Len: 4522
+84:143  0:000    10. 79AE2E60: 'SSDT', 'xh_rvp08', Rev: 2, Len: 2603
+84:143  0:000    11. 79AE3890: 'UEFI', 'A M I', Rev: 1, Len: 72
+84:143  0:000    12. 79AE38D8: 'SSDT', 'CpuSsdt', Rev: 2, Len: 6062
+84:143  0:000    13. 79AE5088: 'LPIT', 'KBL', Rev: 1, Len: 148
+84:143  0:000    14. 79AE5120: 'SSDT', 'HdaDsp', Rev: 2, Len: 321
+84:143  0:000    15. 79AE5268: 'SSDT', 'sensrhub', Rev: 2, Len: 671
+84:143  0:000    16. 79AE5508: 'SSDT', 'PtidDevc', Rev: 2, Len: 12290
+84:143  0:000    17. 79AE8510: 'SSDT', 'TbtTypeC', Rev: 2, Len: 1303
+84:143  0:000    18. 79AE8A28: 'SSDT', 'Wwan', Rev: 2, Len: 745
+84:143  0:000    19. 79AE8D18: 'DBGP', '', Rev: 1, Len: 52
+84:143  0:000    20. 79AE8D50: 'DBG2', '', Rev: 0, Len: 84
+84:143  0:000    21. 79AE8DA8: 'BGRT', 'A M I', Rev: 1, Len: 56
+84:143  0:000    22. 79AE8DE0: 'WSMT', 'A M I', Rev: 1, Len: 40
+84:143  0:000  Found UEFI Acpi 1.0 RSDP at 79AB3000
+84:143  0:000  Printing ACPI tables from RSDP 79AB3000 ...
+84:143  0:000   79AB3000: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
+84:143  0:000    (Xsdt: 79AB30B0, Rsdt: 79AB3028)
+84:143  0:000    79AB30B0: 'XSDT', 'A M I', Rev: 1, Len: 220
+84:143  0:000    79AB3028: 'RSDT', 'A M I', Rev: 1, Len: 128
+84:143  0:000    Tables in Xsdt: 23
+84:143  0:000    0. 79ADBD40: 'FACP', 'A M I', Rev: 6, Len: 276
+84:143  0:000        (Dsdt: 79AB3220, Facs: 79B2EF00, XDsdt: 79AB3220, XFacs: 0)
+84:143  0:000        79AB3220: 'DSDT', 'A M I', Rev: 2, Len: 166681
+84:145  0:002        79B2EF00: 'FACS', Ver: 2, Len: 64
+84:145  0:000    1. 79ADBE58: 'APIC', 'A M I', Rev: 3, Len: 160
+84:145  0:000    2. 79ADBEF8: 'FPDT', 'A M I', Rev: 1, Len: 68
+84:145  0:000    3. 79ADBF40: 'FIDT', 'A M I', Rev: 1, Len: 156
+84:145  0:000    4. 79ADBFE0: 'MCFG', 'A M I', Rev: 1, Len: 60
+84:145  0:000    5. 79ADC020: 'SSDT', 'SataTabl', Rev: 1, Len: 931
+84:145  0:000    6. 79ADC3C8: 'SSDT', 'SaSsdt', Rev: 2, Len: 12645
+84:145  0:000    7. 79ADF530: 'SSDT', 'PegSsdt', Rev: 2, Len: 10051
+84:145  0:000    8. 79AE1C78: 'HPET', 'KBL', Rev: 1, Len: 56
+84:145  0:000    9. 79AE1CB0: 'SSDT', 'Ther_Rvp', Rev: 2, Len: 4522
+84:145  0:000    10. 79AE2E60: 'SSDT', 'xh_rvp08', Rev: 2, Len: 2603
+84:145  0:000    11. 79AE3890: 'UEFI', 'A M I', Rev: 1, Len: 72
+84:145  0:000    12. 79AE38D8: 'SSDT', 'CpuSsdt', Rev: 2, Len: 6062
+84:145  0:000    13. 79AE5088: 'LPIT', 'KBL', Rev: 1, Len: 148
+84:145  0:000    14. 79AE5120: 'SSDT', 'HdaDsp', Rev: 2, Len: 321
+84:145  0:000    15. 79AE5268: 'SSDT', 'sensrhub', Rev: 2, Len: 671
+84:145  0:000    16. 79AE5508: 'SSDT', 'PtidDevc', Rev: 2, Len: 12290
+84:145  0:000    17. 79AE8510: 'SSDT', 'TbtTypeC', Rev: 2, Len: 1303
+84:145  0:000    18. 79AE8A28: 'SSDT', 'Wwan', Rev: 2, Len: 745
+84:145  0:000    19. 79AE8D18: 'DBGP', '', Rev: 1, Len: 52
+84:145  0:000    20. 79AE8D50: 'DBG2', '', Rev: 0, Len: 84
+84:145  0:000    21. 79AE8DA8: 'BGRT', 'A M I', Rev: 1, Len: 56
+84:145  0:000    22. 79AE8DE0: 'WSMT', 'A M I', Rev: 1, Len: 40
+84:145  0:000    Tables in Rsdt: 23
+84:145  0:000    0. 79AB3198: 'FACP', 'A M I', Rev: 2, Len: 132
+84:145  0:000        (Dsdt: 79AB3220, Facs: 79B2EEC0)
+84:145  0:000        79AB3220: 'DSDT', 'A M I', Rev: 2, Len: 166681
+84:148  0:002        79B2EEC0: 'FACS', Ver: 0, Len: 64
+84:148  0:000    1. 79ADBE58: 'APIC', 'A M I', Rev: 3, Len: 160
+84:148  0:000    2. 79ADBEF8: 'FPDT', 'A M I', Rev: 1, Len: 68
+84:148  0:000    3. 79ADBF40: 'FIDT', 'A M I', Rev: 1, Len: 156
+84:148  0:000    4. 79ADBFE0: 'MCFG', 'A M I', Rev: 1, Len: 60
+84:148  0:000    5. 79ADC020: 'SSDT', 'SataTabl', Rev: 1, Len: 931
+84:148  0:000    6. 79ADC3C8: 'SSDT', 'SaSsdt', Rev: 2, Len: 12645
+84:148  0:000    7. 79ADF530: 'SSDT', 'PegSsdt', Rev: 2, Len: 10051
+84:148  0:000    8. 79AE1C78: 'HPET', 'KBL', Rev: 1, Len: 56
+84:148  0:000    9. 79AE1CB0: 'SSDT', 'Ther_Rvp', Rev: 2, Len: 4522
+84:148  0:000    10. 79AE2E60: 'SSDT', 'xh_rvp08', Rev: 2, Len: 2603
+84:148  0:000    11. 79AE3890: 'UEFI', 'A M I', Rev: 1, Len: 72
+84:148  0:000    12. 79AE38D8: 'SSDT', 'CpuSsdt', Rev: 2, Len: 6062
+84:148  0:000    13. 79AE5088: 'LPIT', 'KBL', Rev: 1, Len: 148
+84:148  0:000    14. 79AE5120: 'SSDT', 'HdaDsp', Rev: 2, Len: 321
+84:148  0:000    15. 79AE5268: 'SSDT', 'sensrhub', Rev: 2, Len: 671
+84:148  0:000    16. 79AE5508: 'SSDT', 'PtidDevc', Rev: 2, Len: 12290
+84:148  0:000    17. 79AE8510: 'SSDT', 'TbtTypeC', Rev: 2, Len: 1303
+84:148  0:000    18. 79AE8A28: 'SSDT', 'Wwan', Rev: 2, Len: 745
+84:148  0:000    19. 79AE8D18: 'DBGP', '', Rev: 1, Len: 52
+84:148  0:000    20. 79AE8D50: 'DBG2', '', Rev: 0, Len: 84
+84:148  0:000    21. 79AE8DA8: 'BGRT', 'A M I', Rev: 1, Len: 56
+84:148  0:000    22. 79AE8DE0: 'WSMT', 'A M I', Rev: 1, Len: 40
