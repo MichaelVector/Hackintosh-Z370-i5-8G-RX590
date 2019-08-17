@@ -14,7 +14,11 @@
 			<false/>
 			<key>Fixes</key>
 			<dict>
+				<key>AddPNLF</key>
+				<true/>
 				<key>FixShutdown</key>
+				<false/>
+				<key>FixUSB</key>
 				<false/>
 			</dict>
 			<key>Name</key>
@@ -133,6 +137,34 @@
 					RUgwMg==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename XHCI to XHC (USB)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					WEhDSQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					WEhDXw==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename XHC1 to XHC (USB)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					WEhDMQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					WEhDXw==
+					</data>
+				</dict>
 			</array>
 			<key>ReuseFFFF</key>
 			<false/>
@@ -146,13 +178,13 @@
 			<key>DropOem</key>
 			<false/>
 			<key>EnableC2</key>
-			<true/>
+			<false/>
 			<key>EnableC4</key>
-			<true/>
+			<false/>
 			<key>EnableC6</key>
-			<true/>
+			<false/>
 			<key>EnableC7</key>
-			<true/>
+			<false/>
 			<key>Generate</key>
 			<dict>
 				<key>APLF</key>
@@ -160,24 +192,16 @@
 				<key>APSN</key>
 				<false/>
 				<key>CStates</key>
-				<true/>
+				<false/>
 				<key>PStates</key>
-				<true/>
+				<false/>
 				<key>PluginType</key>
 				<false/>
 			</dict>
-			<key>PluginType</key>
-			<string>1</string>
 		</dict>
-		<key>SortedOrder</key>
-		<array>
-			<string>SSDT-pr.aml</string>
-		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
-		<key>Arguments</key>
-		<string>nv_disable=1 kext-dev-mode=1 darkwake=1</string>
 		<key>CustomLogo</key>
 		<false/>
 		<key>Debug</key>
@@ -186,21 +210,21 @@
 		<string>LastBootedVolume</string>
 		<key>Legacy</key>
 		<string>PBR</string>
+		<key>NeverHibernate</key>
+		<true/>
 		<key>NoEarlyProgress</key>
 		<false/>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>3</integer>
+		<integer>5</integer>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
 	<key>CPU</key>
 	<dict>
 		<key>HWPEnable</key>
-		<true/>
-		<key>Type</key>
-		<string>Unknown</string>
+		<false/>
 		<key>UseARTFrequency</key>
 		<false/>
 	</dict>
@@ -213,29 +237,346 @@
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
-		<key>FakeID</key>
-		<dict>
-			<key>IntelGFX</key>
-			<string>0x3E9B8086</string>
-		</dict>
 		<key>Properties</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
+			<key>PciRoot(0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Host bridge</string>
+				<key>model</key>
+				<string>8th Gen Core Processor Host Bridge/DRAM Registers</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor PCIe Controller (x16)</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>VGA compatible controller</string>
+				<key>hda-gfx</key>
+				<string>onboard-2</string>
+				<key>model</key>
+				<string>Radeon RX 590</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x1)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal</string>
 				<key>device_type</key>
 				<string>Audio device</string>
-				<key>hda-gfx</key>
-				<string>onboard-2</string>
-				<key>layout-id</key>
+				<key>model</key>
+				<string>Radeon RX 590 HDMI Audio</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>USB controller</string>
+				<key>model</key>
+				<string>200 Series/Z370 Chipset Family USB 3.0 xHCI Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x14,0x2)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Signal processing controller</string>
+				<key>model</key>
+				<string>200 Series PCH Thermal Subsystem</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Communication controller</string>
+				<key>model</key>
+				<string>200 Series PCH CSME HECI #1</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x17,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>SATA controller</string>
+				<key>model</key>
+				<string>200 Series PCH SATA controller [AHCI mode]</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1b,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>200 Series PCH PCI Express Root Port #17</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1b,0x4)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Communication controller</string>
+				<key>model</key>
+				<string>200 Series PCH PCI Express Root Port #21</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1b,0x4)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Network controller</string>
+				<key>model</key>
+				<string>NVMe SSD Controller SM981/PM981/PM983</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1c,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>200 Series PCH PCI Express Root Port #1</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1c,0x4)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>200 Series PCH PCI Express Root Port #5</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1c,0x4)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Network controller</string>
+				<key>model</key>
+				<string>BCM43602 802.11ac Wireless LAN SoC</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1c,0x6)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>200 Series PCH PCI Express Root Port #7</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1c,0x6)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Network controller</string>
+				<key>model</key>
+				<string>BCM4360 802.11ac Wireless Network Adapter</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1d,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>200 Series PCH PCI Express Root Port #9</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>ISA bridge</string>
+				<key>model</key>
+				<string>Z370 Chipset LPC/eSPI Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x2)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Memory controller</string>
+				<key>model</key>
+				<string>200 Series/Z370 Chipset Family Power Management Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x4)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>SMBus</string>
+				<key>model</key>
+				<string>200 Series/Z370 Chipset Family SMBus Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x6)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Ethernet controller</string>
+				<key>model</key>
+				<string>Ethernet Connection (2) I219-V</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>
+				BwCbPg==
+				</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device-id</key>
+				<data>
+				mz4AAA==
+				</data>
+				<key>device_type</key>
+				<string>VGA compatible controller</string>
+				<key>enable-hdmi20</key>
 				<data>
 				AQAAAA==
 				</data>
+				<key>framebuffer-con0-busid</key>
+				<data>
+				BQAAAA==
+				</data>
+				<key>framebuffer-con0-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con0-flags</key>
+				<data>
+				xwMAAA==
+				</data>
+				<key>framebuffer-con0-index</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con0-pipe</key>
+				<data>
+				CQAAAA==
+				</data>
+				<key>framebuffer-con0-type</key>
+				<data>
+				AAgAAA==
+				</data>
+				<key>framebuffer-con1-busid</key>
+				<data>
+				BAAAAA==
+				</data>
+				<key>framebuffer-con1-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con1-flags</key>
+				<data>
+				xwMAAA==
+				</data>
+				<key>framebuffer-con1-index</key>
+				<data>
+				AgAAAA==
+				</data>
+				<key>framebuffer-con1-pipe</key>
+				<data>
+				CgAAAA==
+				</data>
+				<key>framebuffer-con1-type</key>
+				<data>
+				AAQAAA==
+				</data>
+				<key>framebuffer-con2-busid</key>
+				<data>
+				BgAAAA==
+				</data>
+				<key>framebuffer-con2-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con2-flags</key>
+				<data>
+				xwMAAA==
+				</data>
+				<key>framebuffer-con2-index</key>
+				<data>
+				AwAAAA==
+				</data>
+				<key>framebuffer-con2-pipe</key>
+				<data>
+				CAAAAA==
+				</data>
+				<key>framebuffer-con2-type</key>
+				<data>
+				AAQAAA==
+				</data>
+				<key>framebuffer-con3-busid</key>
+				<data>
+				AAAAAA==
+				</data>
+				<key>framebuffer-con3-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con3-flags</key>
+				<data>
+				IAAAAA==
+				</data>
+				<key>framebuffer-con3-index</key>
+				<data>
+				/////w==
+				</data>
+				<key>framebuffer-con3-pipe</key>
+				<data>
+				AAAAAA==
+				</data>
+				<key>framebuffer-con3-type</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-fbmem</key>
+				<data>
+				AACQAA==
+				</data>
+				<key>framebuffer-patch-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-stolenmem</key>
+				<data>
+				AAAwAQ==
+				</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>
+				AAAAgA==
+				</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
 				<key>model</key>
-				<string>200 Series PCH HD Audio</string>
+				<string>Intel UHD Graphics 630</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x8,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>System peripheral</string>
+				<key>model</key>
+				<string>Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th Gen Core Processor Gaussian Mixture Model</string>
 			</dict>
 		</dict>
+		<key>SetIntelMaxBacklight</key>
+		<false/>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
@@ -295,7 +636,7 @@
 			<key>ATI</key>
 			<false/>
 			<key>Intel</key>
-			<true/>
+			<false/>
 			<key>NVidia</key>
 			<false/>
 		</dict>
@@ -307,8 +648,6 @@
 		<false/>
 		<key>RadeonDeInit</key>
 		<false/>
-		<key>ig-platform-id</key>
-		<string>0x3E9B0007</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -366,25 +705,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>USB Port limit patch #4 10.14.x modify by DalianSky(credits PMheart)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				g/8PDw==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCI</string>
-				<key>Replace</key>
-				<data>
-				g/8/Dw==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB port limit patch #1 10.14.x modify by DalianSky(credit ydeng)</string>
+				<string>USB Port limit patch #1/2 10.15.x (credit DalianSky)</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -394,7 +715,7 @@
 				<key>InfoPlistPatch</key>
 				<false/>
 				<key>MatchOS</key>
-				<string>10.14.x</string>
+				<string>10.15.x</string>
 				<key>Name</key>
 				<string>com.apple.iokit.IOUSBHostFamily</string>
 				<key>Replace</key>
@@ -404,330 +725,22 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>USB port limit patch #2 10.14.x modify by DalianSky(credit PMHeart)</string>
+				<string>USB Port limit patch #2/2 10.15.x (credit DalianSky)</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				g+MP0w==
+				g/kPDw==
 				</data>
 				<key>InfoPlistPatch</key>
 				<false/>
 				<key>MatchOS</key>
-				<string>10.14.x</string>
+				<string>10.15.x</string>
 				<key>Name</key>
-				<string>com.apple.iokit.IOUSBHostFamily</string>
+				<string>com.apple.driver.usb.AppleUSBXHCI</string>
 				<key>Replace</key>
 				<data>
-				g+M/0w==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Bootloader Graphics - Second Stage Patch</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				QYjE6xE=
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>
-				QYjE6zE=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily IONameMatch</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				PHN0cmluZz5wY2kxNDRkLGE4MDQ8L3N0cmluZz4=
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				PHN0cmluZz5wY2kxNDRkLGE4MDI8L3N0cmluZz4=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#1 (Sierra)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				ibPoAgAAweAMBQAQAACJgw==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				ibPoAgAAweAJBQAQAACJgw==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#2 (Sierra)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				D7aMiIIAAACD+QwPhTIBAA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				D7aMiIIAAACD+QkPhTIBAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#3 (Sierra)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				AMeDpAAAAAAQAABIi0gISA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				AMeDpAAAAAACAABIi0gISA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#4 (Sierra)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				SYnGTYX2dGFBwecMSWP/vg==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				SYnGTYX2dGFBwecJSWP/vg==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#5 (Sierra)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				hv8PAABIwegMD7cPgeH/Dw==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				hv8PAABIwegJD7cPgeH/Dw==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#6_7 (Sierra)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				icGB4f8PAABIAdFIgfn/DwAAdzs=
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				icGB4f8BAABIAdFIgfn/AQAAdzs=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#8 (Sierra)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				SYHF/w8AAEnB7QxJiwQkSA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				SYHF/w8AAEnB7QlJiwQkSA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#9_10 (Sierra)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				BgIAAEyNuAAQAABMiflIgeEA8P//SYmGGgEAAEmJjiIB
-				AABBvAAQAABJKfQ=
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				BgIAAEyNuAACAABMiflIgeEA8P//SYmGGgEAAEmJjiIB
-				AABBvAACAABJKfQ=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#11 (Sierra)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				AABJiY4iAQAAugAQAABIKQ==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				AABJiY4iAQAAugACAABIKQ==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#12 (Sierra)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				yAAAAEkp17gAEAAATYskJA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				yAAAAEkp17gAAgAATYskJA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#13 (Sierra)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				4b+AQBUGTYnWugAQAABFMQ==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				4b+AQBUGTYnWugACAABFMQ==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#14 (Sierra)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				iWTY+EmBxAAQAABJgccA8A==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				iWTY+EmBxAACAABJgccA8A==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#15 (Sierra)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				Bf8PAABIwegMZvfB/w8PlQ==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				Bf8PAABIwegJZvfB/w8PlQ==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#16 (Sierra)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				weIIQQ+2wcHgDEQJ0EQJwA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				weIIQQ+2wcHgCUQJ0EQJwA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily Pike R. Alpha Patch#17 (Sierra)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				RYTJD5XAD7bAweAMRAnYRA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				RYTJD5XAD7bAweAJRAnYRA==
+				g/k/Dw==
 				</data>
 			</dict>
 		</array>
@@ -740,23 +753,23 @@
 		<string>0x67</string>
 		<key>ROM</key>
 		<data>
-		nwKgw6YZ
+		y4/ckb6G
 		</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>02/18/2019</string>
+		<string>05/28/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IM191.88Z.F000.B00.1902181222</string>
+		<string>IM191.88Z.F000.B00.1905281819</string>
 		<key>Board-ID</key>
 		<string>Mac-AA95B1DDAB278B95</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02934501GULNV91M</string>
+		<string>C02902500J9LNV9CB</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -768,11 +781,11 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>220.250.368.0.0</string>
+		<string>220.270.76.0.0</string>
 		<key>Family</key>
 		<string>iMac</string>
 		<key>FirmwareFeatures</key>
-		<string>0xFC0FE137</string>
+		<string>0xFD8FF576</string>
 		<key>FirmwareFeaturesMask</key>
 		<string>0xFF1FFF3F</string>
 		<key>LocationInChassis</key>
@@ -786,16 +799,16 @@
 		<key>ProductName</key>
 		<string>iMac19,1</string>
 		<key>SerialNumber</key>
-		<string>C02Z80LCJV3Q</string>
+		<string>C02Y38YLJV3Q</string>
 		<key>SmUUID</key>
-		<string>070A6EEF-AC8C-47C8-9FB2-245F5BC3A619</string>
+		<string>86AAD53C-9273-4653-BB12-79A99591BE86</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
 		<key>CustomUUID</key>
-		<string>9B4D7001-3A84-42DD-99D1-0AD1FB0E1D09</string>
+		<string>B7F576C7-E512-46A3-ACCC-EC67BD546F78</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
