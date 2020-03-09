@@ -1,9 +1,7 @@
 
 >卖掉了用了两年的XPS15-9560，因为性能实在跟不上，索性卖掉XPS窜了台台式机，正式用性能比较好的黑苹果了。
 
-<fancybox>
 <img src='https://cos.ap-chengdu.myqcloud.com/tuchuang-1258561688/%E9%BB%91%E8%8B%B9%E6%9E%9C/%E9%BB%91%E8%8B%B9%E6%9E%9C10.14.5.jpg'>
-</fancybox>
 
 
 ## 配置如下：
