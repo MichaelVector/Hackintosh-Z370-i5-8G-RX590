@@ -64,4 +64,4 @@
 
 # 详细介绍可以在我的网站里找到
 
-**[vector.today](vector.today)**
+[vector.today](https://vector.today/)
